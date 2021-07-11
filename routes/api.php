@@ -26,7 +26,7 @@ Route::post('/CrearPersona', function(Request $request){
     $persona->origen = $_SERVER['SERVER_ADDR'];
     $persona->save();
 
-    return $persona;
+    return personas::all();
 });
 
 Route::post('/git-auto-deploy', function(){
