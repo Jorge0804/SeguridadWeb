@@ -46,6 +46,9 @@ class AutoDeploy extends Command
     {
         /*exec("cd /var/www/html/SeguridadWeb/");
 	    exec("git pull");*/
-        return shell_exec('sudo git pul');
+        SSH::into('production')->run(array(
+            'cd /var/www/html/SeguridadWeb/',
+            'git pull'
+        ));
     }
 }
