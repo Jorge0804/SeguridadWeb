@@ -3,6 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class AutoDeploy extends Command
 {
@@ -28,13 +30,13 @@ class AutoDeploy extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->Ejecutar();
+        //$this->Ejecutar();
     }
 
-    private function Ejecutar(){
+    /*private function Ejecutar(){
         exec("cd /var/www/html/SeguridadWeb/");
         exec("git pull");
-    }
+    }*/
     /**
      * Execute the console command.
      *
@@ -42,7 +44,10 @@ class AutoDeploy extends Command
      */
     public function handle()
     {
-        exec("cd /var/www/html/SeguridadWeb/");
-	    exec("git pull");
+        /*exec("cd /var/www/html/SeguridadWeb/");
+	    exec("git pull");*/
+        $comando = "git pull";
+        $proceso = new Process($comando);
+        $proceso->run();
     }
 }
