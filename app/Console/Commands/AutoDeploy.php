@@ -46,7 +46,6 @@ class AutoDeploy extends Command
     {
         /*exec("cd /var/www/html/SeguridadWeb/");
 	    exec("git pull");*/
-        $output = shell_exec('sudo php -v');
-        echo "<pre>$output</pre>";
+        return shell_exec('sudo git pul');
     }
 }
