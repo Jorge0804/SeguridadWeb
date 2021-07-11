@@ -21,10 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/CrearPersona', function(Request $request){
     $persona = new personas();
-    $persona->nombre  = 'Jorge 2';
-    $persona->edad = 22;
+    $persona->nombre  = $request->nombre;
+    $persona->edad = $request->edad;
     $persona->origen = $_SERVER['SERVER_ADDR'];
-
     $persona->save();
 
     return $persona;
