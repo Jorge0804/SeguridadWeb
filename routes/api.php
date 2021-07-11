@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\personas;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::post('/CrearPersona', function(Request $request){
+    $persona = new personas();
+    $persona->nombre  = 'Jorge 2';
+    $persona->edad = 22;
+    $persona->origen = $_SERVER['SERVER_ADDR'];
+
+    $persona->save();
 });
 
 Route::post('/git-auto-deploy', function(){
