@@ -135,10 +135,6 @@ return [
     */
 
     'providers' => [
-
-        /*Provider para GIT*/
-        Orphans\GitDeploy\GitDeployServiceProvider::class,
-
         /*
          * Laravel Framework Service Providers...
          */
