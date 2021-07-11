@@ -38,8 +38,8 @@ class AutoDeploy extends Command
     public function handle()
     {
         exec("git add .");
-	exec("git commit - 'Cambios desde el servidor'");
-	exec("git fetch");
-	exec("git pull --all");
+	    exec("git commit - 'Cambios desde el servidor'");
+	    exec("git fetch");
+	    exec("git pull --all");
     }
 }

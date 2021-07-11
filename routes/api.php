@@ -21,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/git-auto-deploy', function(){
     Artisan::call('git:deploy');
 
-    exit;
+    return 'hola';
 });
