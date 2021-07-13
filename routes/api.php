@@ -30,7 +30,5 @@ Route::post('/CrearPersona', function(Request $request){
 });
 
 Route::post('/git-auto-deploy', function(){
-    Artisan::call('git:deploy');
-
-    return 'hola';
+    return Artisan::call('git:deploy');
 });
