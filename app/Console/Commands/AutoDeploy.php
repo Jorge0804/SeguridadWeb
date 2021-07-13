@@ -30,13 +30,12 @@ class AutoDeploy extends Command
     public function __construct()
     {
         parent::__construct();
-        //$this->Ejecutar();
+        $this->Ejecutar();
     }
 
-    /*private function Ejecutar(){
-        exec("cd /var/www/html/SeguridadWeb/");
-        exec("git pull");
-    }*/
+    private function Ejecutar(){
+        exec("cd /var/www/html/SeguridadWeb/ && sudo git pull");
+    }
     /**
      * Execute the console command.
      *
