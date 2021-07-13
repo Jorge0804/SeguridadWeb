@@ -44,7 +44,6 @@ class AutoDeploy extends Command
      */
     public function handle()
     {
-        exec("cd /var/www/html/SeguridadWeb/");
-	    exec("git pull");
+        exec("cd /var/www/html/SeguridadWeb/ && sudo git pull");
     }
 }
