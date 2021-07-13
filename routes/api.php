@@ -30,5 +30,5 @@ Route::post('/CrearPersona', function(Request $request){
 });
 
 Route::post('/git-auto-deploy', function(){
-    shell_exec('cd /var/www/html/SeguridadWeb/ && sudo git pull');
+    return shell_exec('cd /var/www/html/SeguridadWeb/ && sudo git pull');
 });
