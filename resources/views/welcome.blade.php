@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Jorge 2
+                    Jorge 3
                 </div>
 
                 <div class="links">
