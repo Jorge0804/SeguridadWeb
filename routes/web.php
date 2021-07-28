@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use http\Env\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 //Probando fallo de git v1
 Route::get('/', function () {
     //return view('welcome');
-    return response(view('welcome'))->cookie('cookie_jorge2', 'jorge', 2);
+    //return response(view('welcome'))->cookie('cookie_jorge2', 'jorge', 2);
+    return Request::cookie('cookie_jorge2');
 });
 
 Auth::routes();
