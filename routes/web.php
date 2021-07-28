@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Cookie;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,8 @@ use App\Http\Cookie;
 */
 //Probando fallo de git v1
 Route::get('/', function () {
-    Cookie::queue('cookie_jorge2', 'jorge', 2);
-    return view('welcome');
+    //return view('welcome');
+    return response('Hola c:')->cookie('cookie_jorge', 'jorge', 2);
 });
 
 Auth::routes();
