@@ -14,7 +14,7 @@ use http\Cookie;
 */
 //Probando fallo de git v1
 Route::get('/', function () {
-    Cookie::queue('cookie_jorge', 'jorge', 2);
+    Cookie::queue('cookie_jorge2', 'jorge', 2);
     return view('welcome');
 });
 
