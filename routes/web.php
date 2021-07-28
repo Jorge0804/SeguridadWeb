@@ -20,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/prueba', function(){
-    return \Illuminate\Support\Facades\Auth::user();
+    $coo = response('Bien :D')->cookie('p_session', Auth::user(), 2);
+    return Cookie::get('p_session');;
 });
 
 Auth::routes();
