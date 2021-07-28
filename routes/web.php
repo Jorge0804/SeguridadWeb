@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 //Probando fallo de git v1
 Route::get('/', function () {
-    cookie('cookie_jorge2', 'jorge', 2);
-    return view('welcome');
-    //return response('Hola c:')->cookie('cookie_jorge', 'jorge', 2);
+    //return view('welcome');
+    return response(view('welcome'))->cookie('cookie_jorge2', 'jorge', 2);
 });
 
 Auth::routes();
