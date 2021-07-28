@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/prueba', function(){
     //return response('Bien :D')->cookie('p_session', Auth::user(), 2);
-    return Cookie::get('p_session');;
+    return json_encode(Cookie::get('p_session'));
 });
 
 Auth::routes();
