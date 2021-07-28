@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use http\Cookie;
+use Cookie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
