@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/prueba', function(){
-    $coo = response('Bien :D')->cookie('p_session', Auth::user(), 2);
-    return Cookie::get('p_session');;
+    return response('Bien :D')->cookie('p_session', Auth::user(), 2);
+    //return Cookie::get('p_session');;
 });
 
 Auth::routes();
