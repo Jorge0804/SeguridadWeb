@@ -14,8 +14,8 @@ use App\Http\Request;
 */
 //Probando fallo de git v1
 Route::get('/', function () {
-    return view('welcome');
-    //return response(view('welcome'))->cookie('cookie_jorge2', 'jorge', 2);
+    //return view('welcome');
+    return response(view('welcome'))->cookie('cookie_jorge', 'jorge', 2);
     //return Cookie::get('cookie_jorge2');
 });
 
